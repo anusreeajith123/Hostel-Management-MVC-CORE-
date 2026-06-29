@@ -15,7 +15,7 @@ namespace HostelManagement.Controllers
 
         public IActionResult Index()
         {
-            return View();
+           return View("Index1");
         }
 
         public IActionResult Privacy()
