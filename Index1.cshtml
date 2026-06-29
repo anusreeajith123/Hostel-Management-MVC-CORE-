@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+
+<h2>Hostel Management Dashboard</h2>
+
+
+<div class="row">
+
+
+    <div class="col-md-4">
+
+        <div class="card p-3">
+
+            <h4>Student</h4>
+
+            <p>Manage Students</p>
+
+
+            <a asp-controller="Student"
+               asp-action="StudentList"
+               class="btn btn-primary">
+
+                Open Student
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="col-md-4">
+
+        <div class="card p-3">
+
+            <h4>Room</h4>
+
+            <p>Manage Rooms</p>
+
+
+            <a asp-controller="Room"
+               asp-action="RoomList"
+               class="btn btn-success">
+
+                Open Room
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="col-md-4">
+
+        <div class="card p-3">
+
+            <h4>Allocation</h4>
+
+            <p>Allocate Rooms</p>
+
+
+            <a asp-controller="Allocation"
+               asp-action="AllocationList"
+               class="btn btn-warning">
+
+                Open Allocation
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
