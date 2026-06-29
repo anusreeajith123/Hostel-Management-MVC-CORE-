@@ -1,0 +1,64 @@
+﻿@model HostelManagement.Models.Room
+
+
+<h2>Edit Room</h2>
+
+
+
+<form asp-action="EditRoom" method="post">
+
+
+    <input asp-for="Room_id" type="hidden" />
+
+
+
+    <div>
+
+        <label>Room No</label>
+
+        <input asp-for="RoomNo" class="form-control" />
+
+    </div>
+
+
+
+    <div>
+
+        <label>Room Type</label>
+
+        <input asp-for="RoomType" class="form-control" />
+
+    </div>
+
+
+
+    <div>
+
+        <label>Capacity</label>
+
+        <input asp-for="Capacity" class="form-control" />
+
+    </div>
+
+
+
+    <div>
+
+        <label>Status</label>
+
+        <input asp-for="Status" class="form-control" />
+
+    </div>
+
+
+    <br />
+
+
+    <button class="btn btn-success">
+
+        Update
+
+    </button>
+
+
+</form>

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<HostelManagement.Models.Allocation>
+
+
+@{
+    ViewData["Title"] = "Allocation List";
+}
+
+
+<h2>Allocation List</h2>
+
+
+<table class="table table-bordered">
+
+    <thead>
+
+        <tr>
+
+            <th>
+                Allocation ID
+            </th>
+
+
+            <th>
+                Student Name
+            </th>
+
+
+            <th>
+                Room No
+            </th>
+
+
+            <th>
+                Date
+            </th>
+
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>
+                    @item.Allocation_id
+                </td>
+
+
+                <td>
+                    @item.StudentName
+                </td>
+
+
+                <td>
+                    @item.RoomNo
+                </td>
+
+
+                <td>
+                    @item.AllocationDate
+                </td>
+
+
+            </tr>
+
+        }
+
+
+    </tbody>
+
+
+</table>

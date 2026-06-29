@@ -1,0 +1,72 @@
+﻿@model List<HostelManagement.Models.Student>
+
+<h2>Student List</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Phone</th>
+        <th>Action</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Student_id</td>
+
+            <td>@item.StudentName</td>
+
+            <td>@item.Gender</td>
+
+            <td>@item.Course</td>
+
+            <td>@item.Phone</td>
+
+
+            <td>
+
+                <!-- Edit Button -->
+                <a asp-action="EditStudent"
+                   asp-route-id="@item.Student_id"
+                   class="btn btn-warning">
+                    Edit
+                </a>
+
+
+                <!-- Delete Button -->
+                <a asp-action="DeleteStudent"
+                   asp-route-id="@item.Student_id"
+                   class="btn btn-danger"
+                   onclick="return confirm('Are you sure you want to delete this student?')">
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+    }
+
+
+</table>
+
+
+<br />
+
+
+<a asp-action="AddStudent"
+   class="btn btn-primary">
+    Add New Student
+</a>
+
+
+<a asp-controller="Room"
+   asp-action="AddRoom"
+   class="btn btn-success">
+    Go to Room Module
+</a>

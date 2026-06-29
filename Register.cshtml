@@ -1,0 +1,31 @@
+﻿@model HostelManagement.Models.Admin
+
+@{
+    ViewData["Title"] = "Admin Registration";
+}
+
+<h2>Admin Registration</h2>
+
+<form asp-action="Register" method="post">
+
+    <div class="mb-3">
+        <label>User Name</label>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Password</label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+
+    <br />
+
+    <input type="submit" value="Register" class="btn btn-success" />
+
+</form>
+
+<br />
+
+<h4 style="color:green">
+    @ViewBag.msg
+</h4>

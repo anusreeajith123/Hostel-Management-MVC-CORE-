@@ -1,0 +1,37 @@
+﻿@model HostelManagement.Models.Allocation
+
+@{
+    ViewData["Title"] = "Add Allocation";
+}
+
+
+<h2>Add Allocation</h2>
+
+
+<form asp-action="AddAllocation" method="post">
+
+    <div class="form-group">
+        <label>Student ID</label>
+
+        <input asp-for="Student_id" class="form-control" />
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>Room ID</label>
+
+        <input asp-for="Room_id" class="form-control" />
+
+    </div>
+
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">
+        Save
+    </button>
+
+
+</form>

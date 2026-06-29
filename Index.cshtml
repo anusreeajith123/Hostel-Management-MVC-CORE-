@@ -1,0 +1,35 @@
+﻿@model HostelManagement.Models.Admin
+
+@{
+    ViewData["Title"] = "Admin Login";
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<h2>Admin Login</h2>
+
+<form asp-action="Index" method="post">
+
+    <div class="mb-3">
+        <label>User Name</label>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Password</label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+
+    <input type="submit" value="Login" class="btn btn-primary" />
+
+</form>
+
+<br />
+
+<span style="color:red">
+    @ViewBag.msg
+</span>

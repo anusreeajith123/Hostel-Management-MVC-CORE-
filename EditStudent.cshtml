@@ -1,0 +1,27 @@
+﻿@model HostelManagement.Models.Student
+
+<form asp-action="EditStudent" method="post">
+
+    <input asp-for="Student_id" type="hidden" />
+
+    <label>Student Name</label>
+    <input asp-for="StudentName" class="form-control" />
+
+    <label>Gender</label>
+    <input asp-for="Gender" class="form-control" />
+
+    <label>Course</label>
+    <input asp-for="Course" class="form-control" />
+
+    <label>Phone</label>
+    <input asp-for="Phone" class="form-control" />
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">
+        Update
+    </button>
+
+</form>
+
+<h3>@ViewBag.msg</h3>
