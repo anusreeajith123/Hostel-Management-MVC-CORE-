@@ -28,7 +28,7 @@ namespace HostelManagement.Controllers
             if (status)
             {
                 TempData["Success"] = "Login Successful";
-                return RedirectToAction("AddStudent", "Student");
+                return RedirectToAction("Index", "Home");
             }
 
             ViewBag.msg = "Invalid Username or Password";
